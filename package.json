@@ -1,0 +1,39 @@
+{
+  "name": "amt-chatgpt-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AMT Memory - ChatGPT Apps SDK MCP server and memory-panel widget over the AMT gateway.",
+  "license": "MIT",
+  "author": {
+    "name": "Aayush Kataria",
+    "url": "https://github.com/aayush3011"
+  },
+  "repository": "https://github.com/aayush3011/amt-chatgpt-plugin",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build:widget": "node scripts/build-widget.mjs",
+    "build:server": "tsc -p tsconfig.json",
+    "build": "npm run build:widget && npm run build:server",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.19.1",
+    "express": "^5.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "esbuild": "^0.25.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.9.2"
+  }
+}

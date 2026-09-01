@@ -1,0 +1,15 @@
+{
+  "name": "AMT Memory",
+  "description": "Persistent, scoped agent memory (personal / team / org) for ChatGPT, backed by Azure Cosmos DB via the Inference Platform gateway.",
+  "transport": "streamable_http",
+  "mcp_server_url": "https://reranker-api-h2b5czhkfkcphnf4.westus3-01.azurewebsites.net/inference/memory/mcp/",
+  "authentication": {
+    "type": "oauth",
+    "note": "The gateway advertises MCP OAuth discovery (/.well-known/oauth-protected-resource, Dynamic Client Registration, Authorization Code + PKCE). ChatGPT drives a Microsoft (Entra) browser sign-in when the connector is added; no client secret is stored in ChatGPT."
+  },
+  "tools_note": "Adding this URL exposes the full 14-tool AMT surface (add_memory, search_memories, get_memories, summaries, reconcile, whoami, ...). For the rendered Personal/Team/Org memory widget, run the Apps SDK server in this repo instead (or in addition) - see ../README.md.",
+  "availability": {
+    "internal": "Enable Developer Mode (workspace admin) and grant access by RBAC.",
+    "broad": "Wider distribution requires OpenAI app review."
+  }
+}

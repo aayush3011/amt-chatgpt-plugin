@@ -1,0 +1,16 @@
+# Build output
+dist/
+web/widget.build.js
+
+# Dependencies
+node_modules/
+
+# Local env / secrets (never commit)
+.env
+.env.*
+*.token.json
+
+# OS / editor cruft
+.DS_Store
+.idea/
+*.swp
